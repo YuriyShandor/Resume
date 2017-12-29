@@ -1,6 +1,8 @@
 // to compile...
 
 $blue : #033160;
+$light-blue: #0e82f9;
+$black: #232323;
 
 @import "./_components/_open-sans.scss";
 @import "./_components/_roboto.scss";
@@ -208,6 +210,136 @@ body {
   }
 }
 
+section {
+  padding: 150px 0;
+  width: 100%;
+}
+
+#about-me {
+  background: #f8f9fb;
+
+  .about-me__photo {
+    padding-right: 0;
+    z-index: 10;
+
+    img {
+      width: 100%;
+      -webkit-box-shadow: 0px 0px 5px 2px rgba(146,148,151,1);
+              box-shadow: 0px 0px 5px 2px rgba(146,148,151,1);
+    }
+  }
+
+  .about-me__socials {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding-left: 0;
+    z-index: 0;
+
+    .white-area {
+      padding: 57px 0 40px 33px;
+      background: #fff;
+      -webkit-box-shadow: 0px 0px 5px 2px rgba(220,221,223,1);
+              box-shadow: 0px 0px 5px 2px rgba(220,221,223,1);
+      margin-bottom: 30px;
+
+      h2 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 35px;
+        color: $black;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 300;
+        color: #282828;
+      }
+    }
+
+    .social {
+      margin-left: 33px;
+      margin-bottom: 60px;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+
+      span {
+        font-family: Raleway;
+        font-size: 30px;
+        font-weight: 400;
+        color: #c2c2c2;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .about-me__bio {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 18px;
+    color: $black;
+
+  }
+}
+
+.social-icons {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  a {
+    width: 35px;
+    height: 35px;
+    border-radius: 27px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 10px;
+    -webkit-transition: all, 0.5s;
+    transition: all, 0.5s;
+    color: #fff;
+    text-decoration: none;
+
+    i {
+      font-size: 20px;
+    }
+
+    &:nth-child(1) {
+      background: #475993;
+    }
+
+    &:nth-child(2) {
+      background: #80c52c;
+    }
+
+    &:nth-child(3) {
+      background: #289fd9;
+    }
+
+    &:nth-child(4) {
+      background: #000;
+    }
+
+    &:hover {
+      background: $light-blue;
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
