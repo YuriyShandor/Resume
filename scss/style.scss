@@ -220,7 +220,7 @@ section {
 
   .about-me__photo {
     padding-right: 0;
-    z-index: 10;
+    z-index: 1;
 
     img {
       width: 100%;
@@ -278,14 +278,122 @@ section {
     }
   }
 
-  .about-me__bio {
+  .personal-info {
+    margin-top: 80px;
+
+    h3 {
+      width: 100%;
+      font-family: Raleway;
+      font-size: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .about-me__wrapper {
     display: -ms-flex;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 18px;
-    color: $black;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
+    .about-me__bio {
+      color: $black;
+
+      &-block {
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 18px;
+
+        * {
+          display: -ms-flex;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+
+          span {
+            margin-top: 20px;
+          }
+        }
+
+        &_01 {
+          span {
+            font-weight: 700;
+          }
+        }
+
+        &_02 {
+          margin-left: 50px;
+
+          span {
+            font-weight: 400;
+            -webkit-transform: translateY(-1px);
+                    transform: translateY(-1px);
+          }
+        }
+      }
+    }
+
+    .about-me__CV {
+      padding-left: 80px;
+    }
+  }
+}
+
+.main-btn {
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 5px;
+  text-decoration: none;
+  background: $light-blue;
+  position: relative;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+
+  &::after {
+    position: absolute;
+    left: 30px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    background: #fff;
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
+  }
+
+  &:hover {
+    background: darken($light-blue, 10%);
+    text-decoration: none;
+    color: #fff;
+
+    &:after {
+      width: 76%;
+    }
+  }
+
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  i {
+    margin-left: 10px;
   }
 }
 
@@ -342,19 +450,332 @@ section {
 }
 
 @media only screen and (max-width : 1199px) {
+  section {
+    padding: 100px 0;
+  }
 
+  #about-me {
+    .about-me__socials {
+      .white-area {
+        padding: 47px 0 30px 33px;
+        margin-bottom: 30px;
+
+        h2 {
+          font-size: 35px;
+        }
+
+        h3 {
+          font-size: 22px;
+        }
+      }
+
+      .social {
+        margin-left: 33px;
+        margin-bottom: 30px;
+
+        span {
+          font-size: 30px;
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .personal-info {
+      margin-top: 60px;
+
+      h3 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-me__wrapper {
+      .about-me__bio {
+        &-block {
+          font-size: 18px;
+
+          * {
+            span {
+              margin-top: 20px;
+            }
+          }
+
+          &_02 {
+            margin-left: 50px;
+          }
+        }
+      }
+
+      .about-me__CV {
+        padding-left: 50px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 991px) {
+  section {
+    padding: 75px 0;
+  }
 
+  #about-me {
+    .about-me__socials {
+      .white-area {
+        padding: 37px 0 25px 25px;
+        margin-bottom: 25px;
+
+        h2 {
+          font-size: 32px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      .social {
+        margin-left: 25px;
+        margin-bottom: 30px;
+
+        span {
+          font-size: 24px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .personal-info {
+      margin-top: 60px;
+
+      h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-me__wrapper {
+      .about-me__bio {
+        &-block {
+          font-size: 18px;
+
+          * {
+            span {
+              margin-top: 20px;
+            }
+          }
+
+          &_02 {
+            margin-left: 50px;
+          }
+        }
+      }
+
+      .about-me__CV {
+        padding-left: 0px;
+        margin-top: 60px;
+
+        .main-btn {
+          margin-left: 35px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 767px) {
+  section {
+    padding: 50px 0;
+  }
 
+  #about-me {
+    .about-me__photo {
+      padding-right: 15px;
+    }
+
+    .about-me__socials {
+      padding-left: 15px;
+
+      .white-area {
+        padding: 37px 0 25px 0px;
+        margin-bottom: 25px;
+        text-align: center;
+
+        h2 {
+          font-size: 30px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      .social {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+        span {
+          font-size: 22px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .personal-info {
+      margin-top: 60px;
+
+      h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-me__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+
+      .about-me__bio {
+        &-block {
+          font-size: 16px;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+
+          * {
+            span {
+              margin-top: 15px;
+            }
+          }
+
+          &_02 {
+            margin-left: 40px;
+          }
+        }
+      }
+
+      .about-me__CV {
+        padding-left: 15px;
+        margin-top: 50px;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+        .main-btn {
+          margin-left: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .main-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+
+    &::after {
+      left: 20px;
+      height: 2.0px;
+    }
+
+    &:hover {
+      &:after {
+        width: 80.5%;
+      }
+    }
+
+    i {
+      margin-left: 7px;
+    }
+  }
 }
 
-@media only screen and (max-width : 567px) {
+@media only screen and (max-width : 436px) {
+  #about-me {
+    .about-me__socials {
+      .white-area {
+        padding: 25px 0 15px 0px;
+        margin-bottom: 25px;
+        text-align: center;
 
+        h2 {
+          font-size: 30px;
+        }
+
+        h3 {
+          width: 220px;
+          font-size: 18px;
+          margin: 0 auto;
+        }
+      }
+
+      .social {
+
+        span {
+          width: 53px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .personal-info {
+      margin-top: 60px;
+      padding: 0 15px;
+
+      h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-me__wrapper {
+      .about-me__bio {
+        &-block {
+          font-size: 16px;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+
+          * {
+            span {
+              margin-top: 15px;
+            }
+          }
+
+          &_02 {
+            margin-left: 40px;
+          }
+        }
+      }
+
+      .about-me__CV {
+        padding-left: 0px;
+        margin-top: 50px;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+        .main-btn {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }
 
 
