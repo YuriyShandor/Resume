@@ -1043,6 +1043,26 @@ section {
   margin-bottom: 100px;
 }
 
+@media only screen and (max-width: 991px) {
+  .section__title {
+    font-size: 36px;
+    margin-bottom: 75px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section__title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .section__title {
+    font-size: 30px;
+  }
+}
+
 .experience .exp-block {
   width: 100%;
   display: -ms-flex;
@@ -1104,6 +1124,7 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 0 50px;
+  background: #fafafc;
   -webkit-box-shadow: 0px 0px 10px 0px #ececec;
   box-shadow: 0px 0px 10px 0px #ececec;
 }
@@ -1116,11 +1137,41 @@ section {
 }
 
 .experience .exp-block__02_firm {
-  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 30px;
   font-size: 24px;
   font-weight: 400;
   color: #515151;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+.experience .exp-block__02_firm::after {
+  margin: 0 auto;
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.5px;
+  background: #0e82f9;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+.experience .exp-block__02_firm:focus {
+  text-decoration: none;
+}
+
+.experience .exp-block__02_firm:hover {
+  text-decoration: none;
+  color: #0e82f9;
+}
+
+.experience .exp-block__02_firm:hover:after {
+  width: 100%;
 }
 
 .experience .exp-block__03 {
@@ -1273,6 +1324,7 @@ section {
     flex-direction: column;
   }
   .experience .exp-block__02_firm {
+    margin: 0 auto;
     margin-top: 20px;
     font-size: 22px;
   }
@@ -1312,5 +1364,26 @@ section {
 @media only screen and (max-width: 576px) {
   .experience .exp-block {
     padding: 0 20px;
+  }
+}
+
+#education .experience .exp-block {
+  display: none;
+}
+
+#education .experience .exp-block:last-child {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#education .experience .exp-block:last-child .exp-block__03 {
+  height: 275px !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  #education .experience .exp-block:last-child .exp-block__03 {
+    height: 250px !important;
   }
 }

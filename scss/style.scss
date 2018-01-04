@@ -790,8 +790,24 @@ section {
   margin-bottom: 100px;
 }
 
-#education {
+@media only screen and (max-width : 991px) {
+  .section__title {
+    font-size: 36px;
+    margin-bottom: 75px;
+  }
+}
 
+@media only screen and (max-width : 767px) {
+  .section__title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width : 567px) {
+  .section__title {
+    font-size: 30px;
+  }
 }
 
 .experience {
@@ -855,6 +871,7 @@ section {
           -ms-flex-pack: center;
               justify-content: center;
       padding: 0 50px;
+      background: lighten(#f8f9fb, 0.5%);
       -webkit-box-shadow: 0px 0px 10px 0px rgba(236,236,236,1);
               box-shadow: 0px 0px 10px 0px rgba(236,236,236,1);
 
@@ -866,11 +883,41 @@ section {
       }
 
       &_firm {
-        margin: 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
         margin-top: 30px;
         font-size: 24px;
         font-weight: 400;
         color: #515151;
+        -webkit-transition: all, .5s;
+        transition: all, .5s;
+
+        &::after {
+          margin: 0 auto;
+          -webkit-transform: translateY(1px);
+                  transform: translateY(1px);
+          content: '';
+          display: block;
+          width: 0;
+          height: 2.5px;
+          background: $light-blue;
+          -webkit-transition: all, .5s;
+          transition: all, .5s;
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $light-blue;
+
+          &:after {
+            width: 100%;
+          }
+        }
       }
     }
 
@@ -1052,6 +1099,7 @@ section {
         }
 
         &_firm {
+          margin: 0 auto;
           margin-top: 20px;
           font-size: 22px;
         }
@@ -1109,6 +1157,39 @@ section {
   .experience {
     .exp-block {
       padding: 0 20px;
+    }
+  }
+}
+
+#education {
+  .experience {
+    .exp-block {
+      display: none;
+
+      &:last-child {
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        .exp-block__03 {
+          height: 275px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 1199px) {
+  #education {
+    .experience {
+      .exp-block {
+        &:last-child {
+          .exp-block__03 {
+            height: 250px !important;
+          }
+        }
+      }
     }
   }
 }
