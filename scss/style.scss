@@ -76,20 +76,12 @@ body {
     }
 
     .header__btn {
-      font-family: Raleway;
-      font-size: 18px;
-      font-weight: 400;
-      color: #fff;
       width: 150px;
       height: 50px;
       display: -ms-flex;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
@@ -99,29 +91,45 @@ body {
       border: 1.5px solid #fff;
       margin-top: 45px;
       border-radius: 50px;
-      text-decoration: none;
+      cursor: pointer;
       -webkit-transition: all, .5s;
       transition: all, .5s;
 
-      &::after {
-        margin: 0 auto;
-        -webkit-transform: translateY(0px);
-                transform: translateY(0px);
-        content: '';
-        display: block;
-        width: 0;
-        height: 1.5px;
-        background: #fff;
+      a {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 400;
+        color: #fff;
         -webkit-transition: all, .5s;
         transition: all, .5s;
+
+        &::after {
+          margin: 0 auto;
+          -webkit-transform: translateY(-2px);
+                  transform: translateY(-2px);
+          content: '';
+          display: block;
+          width: 0;
+          height: 1.5px;
+          background: #fff;
+          -webkit-transition: all, .5s;
+          transition: all, .5s;
+        }
+
+        &:hover {
+          text-decoration: none;
+
+          &::after {
+            width: 100%;
+          }
+        }
       }
 
       &:hover {
         background: #0c6fd5;
-
-        &::after {
-          width: 47%;
-        }
       }
     }
   }
@@ -345,55 +353,68 @@ section {
       }
     }
 
-    .about-me__CV {
-      padding-left: 80px;
+    .main-btn {
+      margin-left: 80px;
     }
   }
 }
 
 .main-btn {
   padding: 15px 30px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 400;
   border-radius: 5px;
   text-decoration: none;
   background: $light-blue;
-  position: relative;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
   -webkit-transition: all, .5s;
   transition: all, .5s;
 
-  &::after {
-    position: absolute;
-    left: 30px;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    content: '';
-    display: block;
-    width: 0;
-    height: 2.5px;
-    background: #fff;
-    -webkit-transition: all, .5s;
-    transition: all, .5s;
+  a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+
+    i {
+      margin-left: 10px;
+    }
+
+    &::after {
+      margin: 0 auto;
+      -webkit-transform: translateY(-3px);
+              transform: translateY(-3px);
+      content: '';
+      display: block;
+      width: 0;
+      height: 2.5px;
+      background: #fff;
+      -webkit-transition: all, .5s;
+      transition: all, .5s;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::after {
+        width: 100%;
+      }
+    }
   }
 
   &:hover {
     background: darken($light-blue, 10%);
-    text-decoration: none;
-    color: #fff;
-
-    &:after {
-      width: 76%;
-    }
-  }
-
-  &:focus {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  i {
-    margin-left: 10px;
   }
 }
 
@@ -506,8 +527,8 @@ section {
         }
       }
 
-      .about-me__CV {
-        padding-left: 50px;
+      .main-btn {
+        margin-left: 50px;
       }
     }
   }
@@ -570,13 +591,8 @@ section {
         }
       }
 
-      .about-me__CV {
-        padding-left: 0px;
-        margin-top: 60px;
-
-        .main-btn {
-          margin-left: 35px;
-        }
+      .main-btn {
+        margin-left: 35px;
       }
     }
   }
@@ -661,21 +677,9 @@ section {
         }
       }
 
-      .about-me__CV {
-        padding-left: 15px;
+      .main-btn {
         margin-top: 50px;
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-
-        .main-btn {
-          margin-left: 0;
-          margin: 0 auto;
-        }
+        margin-left: 0;
       }
     }
   }
@@ -756,22 +760,6 @@ section {
           &_02 {
             margin-left: 40px;
           }
-        }
-      }
-
-      .about-me__CV {
-        padding-left: 0px;
-        margin-top: 50px;
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-
-        .main-btn {
-          margin: 0 auto;
         }
       }
     }
@@ -1194,21 +1182,77 @@ section {
   }
 }
 
+#my-skills {
+  width: 100%;
+  background: #f8f9fb;
+
+  .skills {
+    &__img {
+      background: url(../img/skills__img.jpg) no-repeat center / cover;
+    }
+
+    &__chips {
+      background: #fff;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 20px 20px;
+
+      div {
+        padding: 10px 20px;
+        background: #e2e2e2;
+        margin: 5px 10px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
-
+  #my-skills {
+    .skills {
+      &__img {
+        height: 400px;
+        margin-bottom: 25px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 991px) {
-
+  #my-skills {
+    .skills {
+      &__img {
+        display: none;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 767px) {
+  #my-skills {
+    .skills {
+      &__chips {
+        padding: 20px 29px;
 
+        div {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (max-width : 567px) {
-
+#my-experience {
+  display: none;
 }
 
 
