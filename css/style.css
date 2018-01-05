@@ -1438,6 +1438,21 @@ section {
   display: none;
 }
 
+@-webkit-keyframes pulse {
+  25% {
+    color: #0e82f9;
+  }
+  50% {
+    color: #fff;
+  }
+  75% {
+    color: #0e82f9;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
 .portfolio {
   margin-top: -30px;
 }
@@ -1480,7 +1495,10 @@ section {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
+  text-align: center;
   margin-top: 40%;
+  -webkit-animation: pulse 2.5s infinite normal;
+  animation: pulse 2.5s infinite normal;
   -webkit-transition: all, .3s;
   transition: all, .3s;
 }
@@ -1505,6 +1523,8 @@ section {
 .portfolio-item .portfolio-item__inside .portfolio-item__discr a:hover {
   text-decoration: none;
   color: #0e82f9;
+  -webkit-animation: none;
+  animation: none;
 }
 
 .portfolio-item .portfolio-item__inside .portfolio-item__discr a:hover:after {
@@ -1516,4 +1536,5 @@ section {
   font-size: 16px;
   font-weight: 400;
   color: #e2e2e2;
+  text-align: center;
 }

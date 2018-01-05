@@ -1260,6 +1260,13 @@ section {
 //   background: #f8f9fb;
 // }
 
+@-webkit-keyframes pulse {
+     25% {color: $light-blue;}
+     50% {color: #fff;}
+     75% {color: $light-blue;}
+     100% {color: #fff;}
+}
+
 .portfolio {
   margin-top: -30px;
 
@@ -1298,7 +1305,10 @@ section {
           font-size: 24px;
           font-weight: 700;
           color: #fff;
+          text-align: center;
           margin-top: 40%;
+          -webkit-animation: pulse 2.5s infinite normal;
+                  animation: pulse 2.5s infinite normal;
           -webkit-transition: all, .3s;
           transition: all, .3s;
 
@@ -1322,6 +1332,8 @@ section {
           &:hover {
             text-decoration: none;
             color: $light-blue;
+            -webkit-animation: none;
+                    animation: none;
 
             &:after {
               width: 100%;
@@ -1334,6 +1346,7 @@ section {
           font-size: 16px;
           font-weight: 400;
           color: #e2e2e2;
+          text-align: center;
         }
       }
 
