@@ -4,17 +4,35 @@ $(document).ready(function () {
     $('.nav-bar').slideToggle('0.5s');
   });
 
-  // $('.portfolio-item__inside').directionalHover({
-  //   speed: 300, // Times in ms
-  //   easing: 'ease',
-  //   overlay: "portfolio-item__discr",
-  //   hoverDelay: 0, // Times in ms
-  //   inverse: false,
-  //   hoverElem: '.portfolio-item__discr'
-  // });
-
   $('.portfolio-item__inside').hoverDirection();
 
+  $(".contactForm").submit(function(event){
+    // cancels the form submission
+    event.preventDefault();
+    submitForm();
+  });
+
+  function submitForm(){
+    // Initiate Variables With Form Content
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+
+    $.ajax({
+        type: "POST",
+        url: "../php/process.php",
+        data: "name=" + name + "&email=" + email + "&message=" + message,
+        success : function(text){
+            if (text == "success"){
+                formSuccess();
+            }
+        }
+    });
+  }
+
+  function formSuccess(){
+    $( "#msgSubmit" ).removeClass( "hidden" );
+  }
 });
 
 function getAge(dateString) {
