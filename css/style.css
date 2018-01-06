@@ -377,64 +377,6 @@ body {
   font-weight: 100;
 }
 
-.header__info .header__btn {
-  width: 150px;
-  height: 50px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 1.5px solid #fff;
-  margin-top: 45px;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-transition: all, .5s;
-  transition: all, .5s;
-}
-
-.header__info .header__btn a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  -webkit-transition: all, .5s;
-  transition: all, .5s;
-}
-
-.header__info .header__btn a::after {
-  margin: 0 auto;
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-  content: '';
-  display: block;
-  width: 0;
-  height: 1.5px;
-  background: #fff;
-  -webkit-transition: all, .5s;
-  transition: all, .5s;
-}
-
-.header__info .header__btn a:hover {
-  text-decoration: none;
-}
-
-.header__info .header__btn a:hover::after {
-  width: 100%;
-}
-
-.header__info .header__btn:hover {
-  background: #0c6fd5;
-}
-
 .header__nav-bar {
   position: absolute;
   bottom: 0;
@@ -477,9 +419,6 @@ body {
   .header__info h2 {
     font-size: 25px;
   }
-  .header__info .header__btn {
-    margin-top: 30px;
-  }
   .header__nav-bar {
     height: 75px;
   }
@@ -494,9 +433,6 @@ body {
   }
   .header__info h2 {
     font-size: 22px;
-  }
-  .header__info .header__btn {
-    margin-top: 25px;
   }
 }
 
@@ -1399,6 +1335,8 @@ section {
   position: relative;
   overflow: hidden;
   width: 100%;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 .portfolio-item .portfolio-item__inside img {
@@ -1471,6 +1409,25 @@ section {
   font-weight: 400;
   color: #e2e2e2;
   text-align: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .portfolio-item .portfolio-item__inside {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .portfolio-item .portfolio-item__inside {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .portfolio-item .portfolio-item__inside {
+    width: 80%;
+  }
 }
 
 .footer {
@@ -1562,4 +1519,75 @@ section {
 
 .footer-socials .social-icons a:nth-child(4):hover {
   background: #000;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer .phone-email {
+    padding: 40px 0;
+  }
+  .footer .phone-email span {
+    font-size: 22px;
+  }
+  .footer .phone-email span i {
+    font-size: 26px;
+  }
+  .footer .phone-email span:first-child {
+    margin-right: 75px;
+  }
+  .footer .phone-email span:first-child i {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .phone-email {
+    padding: 40px 0;
+  }
+  .footer .phone-email span {
+    font-size: 20px;
+  }
+  .footer .phone-email span i {
+    font-size: 24px;
+  }
+  .footer .phone-email span:first-child {
+    margin-right: 50px;
+  }
+  .footer .phone-email span:first-child i {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .footer .phone-email {
+    padding: 40px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .footer .phone-email span {
+    font-size: 18px;
+  }
+  .footer .phone-email span i {
+    font-size: 22px;
+  }
+  .footer .phone-email span:first-child {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .footer .phone-email span:first-child i {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  .footer-socials .social-icons a {
+    padding: 30px;
+  }
+  .footer-socials .social-icons a i {
+    font-size: 30px;
+  }
 }
