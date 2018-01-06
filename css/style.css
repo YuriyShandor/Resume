@@ -1472,3 +1472,94 @@ section {
   color: #e2e2e2;
   text-align: center;
 }
+
+.footer {
+  width: 100%;
+}
+
+.footer .phone-email {
+  width: inherit;
+  padding: 50px 0;
+  background: #26272f;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer .phone-email span {
+  font-size: 24px;
+  font-weight: 400;
+  color: #0e82f9;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer .phone-email span i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.footer .phone-email span:first-child {
+  margin-right: 100px;
+}
+
+.footer .phone-email span:first-child i {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+}
+
+.footer-socials {
+  width: inherit;
+  background: #232323;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer-socials .social-icons a {
+  background: transparent;
+  color: #0e82f9;
+  padding: 50px;
+  border-radius: 3px;
+}
+
+.footer-socials .social-icons a i {
+  font-size: 36px;
+}
+
+.footer-socials .social-icons a:hover {
+  color: #fff;
+}
+
+.footer-socials .social-icons a:nth-child(1) {
+  margin-left: 0;
+}
+
+.footer-socials .social-icons a:nth-child(1):hover {
+  background: #475993;
+}
+
+.footer-socials .social-icons a:nth-child(2):hover {
+  background: #80c52c;
+}
+
+.footer-socials .social-icons a:nth-child(3):hover {
+  background: #289fd9;
+}
+
+.footer-socials .social-icons a:nth-child(4):hover {
+  background: #000;
+}
