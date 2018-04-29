@@ -29,23 +29,27 @@ body {
 }
 
 .header {
-  position: relative;
   width: 100%;
   height: 850px;
   background: url(../img/programmin.jpg) no-repeat center / cover;
+  background-attachment: fixed;
   display: -ms-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   &::before {
-    background: rgba(3, 49, 96, 0.9);
+    background: rgba(3, 49, 96, 0.8);
     content: '';
     display: block;
-    height: 100%;
+    height: 110%;
     position: absolute;
     width: 100%;
   }
@@ -60,6 +64,9 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     color: #fff;
+    margin-top: 50%;
+    -webkit-transform: translateY(-130%);
+            transform: translateY(-130%);
 
     h1 {
       font-family: JosefinSans;
@@ -75,27 +82,38 @@ body {
   }
 
   &__nav-bar {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 100px;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 49, 96, 0.7)), to(rgba(3, 49, 96, 1.0)));
-    background: linear-gradient(rgba(3, 49, 96, 0.7), rgba(3, 49, 96, 1.0));
+    padding: 30px 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 49, 96, 0.8)), to(rgba(3, 49, 96, 1.0)));
+    background: linear-gradient(rgba(3, 49, 96, 0.8), rgba(3, 49, 96, 1.0));
+  }
+}
+
+@media only screen and (max-width : 1199px) {
+  .header {
+    &__info {
+      -webkit-transform: translateY(-90%);
+              transform: translateY(-90%);
+    }
+
+    &__nav-bar {
+      padding: 25px 0;
+    }
   }
 }
 
 @media only screen and (max-width : 991px) {
   .header {
     height: 750px;
+    background-attachment: scroll;
+
+    &:before {
+      height: 98%;
+    }
 
     &__info {
+      -webkit-transform: translateY(-75%);
+              transform: translateY(-75%);
       h1 {
         font-size: 75px;
       }
@@ -106,6 +124,8 @@ body {
     }
 
     &__nav-bar {
+      padding: 20px 0;
+
       .container {
         width: 100%;
         padding: 0;
@@ -118,6 +138,10 @@ body {
   .header {
     height: 550px;
 
+    &:before {
+      height: 72%;
+    }
+
     &__info {
       h1 {
         font-size: 65px;
@@ -129,7 +153,8 @@ body {
     }
 
     &__nav-bar {
-      height: 75px;
+      padding: 15px 0;
+
     }
   }
 }
@@ -137,6 +162,8 @@ body {
 @media only screen and (max-width : 567px) {
   .header {
     &__info {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
       padding-left: 25px;
 
       h1 {
@@ -252,7 +279,7 @@ section {
         display: flex;
         font-size: 18px;
 
-        * {
+        .about-me__bio-block_01, .about-me__bio-block_02{
           display: -ms-flex;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -263,6 +290,10 @@ section {
                   flex-direction: column;
 
           span {
+            display: -ms-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
             margin-top: 20px;
           }
         }
@@ -280,6 +311,17 @@ section {
             font-weight: 400;
             -webkit-transform: translateY(-1px);
                     transform: translateY(-1px);
+
+            &#experienceYears, &#experienceMonths {
+              margin: 0;
+              margin-right: 5px;
+              -webkit-transform: translateY(1px);
+                      transform: translateY(1px);
+            }
+
+            &#experienceMonths {
+              // margin-left: 10px;
+            }
           }
         }
       }
@@ -1135,6 +1177,7 @@ section {
           -ms-flex-pack: center;
               justify-content: center;
       padding: 20px 20px;
+      border-radius: 10px;
 
       div {
         padding: 10px 20px;
@@ -1143,6 +1186,12 @@ section {
         border-radius: 50px;
         font-size: 16px;
         font-weight: 600;
+        -webkit-transition: all, .3s;
+        transition: all, .3s;
+
+        &:hover {
+          background: darken(#e2e2e2, 15%);
+        }
       }
     }
   }
