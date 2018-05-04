@@ -44,13 +44,16 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 
   &::before {
     background: rgba(3, 49, 96, 0.8);
     content: '';
     display: block;
-    height: 110%;
+    height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
   }
 
@@ -65,8 +68,8 @@ body {
             flex-direction: column;
     color: #fff;
     margin-top: 50%;
-    -webkit-transform: translateY(-130%);
-            transform: translateY(-130%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
 
     h1 {
       font-family: JosefinSans;
@@ -107,10 +110,6 @@ body {
     height: 750px;
     background-attachment: scroll;
 
-    &:before {
-      height: 98%;
-    }
-
     &__info {
       -webkit-transform: translateY(-75%);
               transform: translateY(-75%);
@@ -137,10 +136,6 @@ body {
 @media only screen and (max-width : 767px) {
   .header {
     height: 550px;
-
-    &:before {
-      height: 72%;
-    }
 
     &__info {
       h1 {
@@ -240,7 +235,13 @@ section {
         font-size: 30px;
         font-weight: 400;
         color: #c2c2c2;
-        margin-right: 30px;
+        margin-right: 15px;
+      }
+
+      &-icons {
+        .svg-inline--fa {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -357,8 +358,8 @@ section {
     font-size: 24px;
     font-weight: 400;
 
-    i {
-      margin-left: 10px;
+    .svg-inline--fa {
+      margin-left: 7px;
     }
 
     &::after {
@@ -418,7 +419,7 @@ section {
     color: #fff;
     text-decoration: none;
 
-    i {
+    .svg-inline--fa {
       font-size: 20px;
     }
 
@@ -673,7 +674,7 @@ section {
       }
     }
 
-    i {
+    .svg-inline--fa {
       margin-left: 7px;
     }
   }
@@ -1394,15 +1395,15 @@ section {
           -ms-flex-align: center;
               align-items: center;
 
-      i {
-        font-size: 30px;
+      .svg-inline--fa {
+        font-size: 26px;
         margin-right: 10px;
       }
 
       &:first-child {
         margin-right: 100px;
 
-        i {
+        .svg-inline--fa {
           -webkit-transform: translateY(1px);
                   transform: translateY(1px);
         }
@@ -1428,7 +1429,7 @@ section {
         padding: 50px;
         border-radius: 3px;
 
-        i {
+        .svg-inline--fa {
           font-size: 36px;
         }
 
@@ -1474,14 +1475,14 @@ section {
       span {
         font-size: 22px;
 
-        i {
+        .svg-inline--fa {
           font-size: 26px;
         }
 
         &:first-child {
           margin-right: 75px;
 
-          i {
+          .svg-inline--fa {
             -webkit-transform: translateY(1px);
                     transform: translateY(1px);
           }
@@ -1499,14 +1500,14 @@ section {
       span {
         font-size: 20px;
 
-        i {
+        .svg-inline--fa {
           font-size: 24px;
         }
 
         &:first-child {
           margin-right: 50px;
 
-          i {
+          .svg-inline--fa {
             -webkit-transform: translateY(1px);
                     transform: translateY(1px);
           }
@@ -1531,7 +1532,7 @@ section {
       span {
         font-size: 18px;
 
-        i {
+        .svg-inline--fa {
           font-size: 22px;
         }
 
@@ -1539,7 +1540,7 @@ section {
           margin-right: 0px;
           margin-bottom: 20px;
 
-          i {
+          .svg-inline--fa {
             -webkit-transform: translateY(0px);
                     transform: translateY(0px);
           }
@@ -1552,7 +1553,7 @@ section {
         a {
           padding: 30px;
 
-          i {
+          .svg-inline--fa {
             font-size: 30px;
           }
         }
