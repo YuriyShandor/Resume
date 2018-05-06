@@ -1,127 +1,43 @@
 @font-face {
   font-family: JosefinSans;
-  src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: JosefinSans;
-  src: url(../fonts/JosefinSans/JosefinSans-SemiBold.ttf);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: JosefinSans;
-  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: JosefinSans;
-  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+  src: url(../fonts/JosefinSans-Light.ttf);
   font-weight: 300;
 }
 
 @font-face {
   font-family: JosefinSans;
-  src: url(../fonts/JosefinSans/JosefinSans-Thin.ttf);
+  src: url(../fonts/JosefinSans-Thin.ttf);
   font-weight: 100;
 }
 
 @font-face {
   font-family: Lato;
-  src: url(../fonts/Lato/Lato-Black.ttf);
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: Lato;
-  src: url(../fonts/Lato/Lato-Bold.ttf);
+  src: url(../fonts/Lato-Bold.ttf);
   font-weight: 700;
 }
 
 @font-face {
   font-family: Lato;
-  src: url(../fonts/Lato/Lato-Semibold.ttf);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Lato;
-  src: url(../fonts/Lato/Lato-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Lato;
-  src: url(../fonts/Lato/Lato-Regular.ttf);
+  src: url(../fonts/Lato-Regular.ttf);
   font-weight: 400;
 }
 
 @font-face {
   font-family: Lato;
-  src: url(../fonts/Lato/Lato-Light.ttf);
+  src: url(../fonts/Lato-Light.ttf);
   font-weight: 300;
 }
 
 @font-face {
-  font-family: Lato;
-  src: url(../fonts/Lato/Lato-Thin.ttf);
-  font-weight: 100;
-}
-
-@font-face {
   font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-Black.ttf);
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-ExtraBold.ttf);
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-Bold.ttf);
+  src: url(../fonts/Raleway-Bold.ttf);
   font-weight: 700;
 }
 
 @font-face {
   font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+  src: url(../fonts/Raleway-Regular.ttf);
   font-weight: 400;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-Light.ttf);
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-ExtraLight.ttf);
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway/Raleway-Thin.ttf);
-  font-weight: 100;
 }
 
 .header-nav .toggler-icon {
@@ -505,7 +421,7 @@ section {
 #about-me .about-me__socials .white-area h3 {
   margin: 0;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
   color: #282828;
 }
 
@@ -1319,7 +1235,7 @@ section {
   margin: 5px 10px;
   border-radius: 50px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   -webkit-transition: all, .3s;
   transition: all, .3s;
 }
